@@ -16,4 +16,6 @@ bashio::log.info "${message}"
 ## Run your program
 filecontent=$(cat /share/ddclient/ddclient.conf)
 bashio::log.info "${filecontent}"
+dirfiles=$(ls /usr/bin/)
+bashio::log.info "${dirfiles}
 exec /usr/bin/ddclient -foreground -file /share/ddclient/ddclient.conf -verbose
