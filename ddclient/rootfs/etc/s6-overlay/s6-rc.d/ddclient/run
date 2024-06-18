@@ -18,6 +18,7 @@ filecontent=$(cat /share/ddclient/ddclient.conf)
 bashio::log.info "${filecontent}"
 dirfiles=$(ls /usr/bin/ | grep ddclient)
 bashio::log.info "${dirfiles}"
+bashio::log.info "STARTING"
 #exec /usr/bin/ddclient -foreground -file /share/ddclient/ddclient.conf
 exec /usr/bin/ddclient -daemon=0 -debug -verbose -noquiet -file /share/ddclient/ddclient.conf
 bashio::log.info "GOT HERE"
