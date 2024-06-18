@@ -1,3 +1,5 @@
+#!/bin/sh
+
 if test "$1" -eq 256 ; then
   e=$((128 + $2))
 else
