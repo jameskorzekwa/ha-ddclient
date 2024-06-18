@@ -1,0 +1,19 @@
+name: "ddclient"
+description: "ddclient"
+version: "0.0.1"
+slug: "ddclient"
+url: "https://github.com/jameskorzekwa/ha-ddclient/src/main/ddclient/"
+init: false
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
+map:
+  - share
+options:
+  message: "All options go directly in the file at /share/ddclient/ddclient.conf"
+schema:
+  message: "str?"
+image: "ghcr.io/jameskorzekwa/{arch}-ha-ddclient"
