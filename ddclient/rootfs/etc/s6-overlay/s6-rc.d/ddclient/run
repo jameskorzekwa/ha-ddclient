@@ -22,7 +22,8 @@ bashio::log.info "STARTING"
 #exec /usr/bin/ddclient -foreground -file /share/ddclient/ddclient.conf
 #exec /usr/bin/ddclient -daemon=0 -debug -verbose -noquiet -file /share/ddclient/ddclient.conf
 bashio::log.info "NOW"
-test=$(/usr/bin/ddclient --help)
-bashio::log.info "${test}"
-bashio::log.info "HERE"
-exec /usr/bin/ddclient --help
+exec watch -n 5 echo "testing"
+# test=$(/usr/bin/ddclient --help)
+# bashio::log.info "${test}"
+# bashio::log.info "HERE"
+# exec /usr/bin/ddclient --help
