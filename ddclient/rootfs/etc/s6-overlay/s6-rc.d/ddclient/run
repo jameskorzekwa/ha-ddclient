@@ -21,6 +21,4 @@ bashio::log.info "${dirfiles}"
 bashio::log.info "STARTING"
 #exec /usr/bin/ddclient -foreground -file /share/ddclient/ddclient.conf
 #exec /usr/bin/ddclient -daemon=0 -debug -verbose -noquiet -file /share/ddclient/ddclient.conf
-exec /usr/bin/ddclient -daemon=0 -debug -verbose -noquiet
-
-bashio::log.info "GOT HERE"
+exec /usr/bin/ddclient --help
