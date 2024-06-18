@@ -14,4 +14,6 @@ message=$(bashio::config 'message')
 bashio::log.info "${message}"
 
 ## Run your program
-exec /usr/bin/ddclient -foreground -file /share/ddclient/ddclient.conf
+filecontent=$(cat /share/ddclient/ddclient.conf)
+bashio::log.info "${filecontent}"
+exec /usr/bin/ddclient -foreground -file /share/ddclient/ddclient.conf -verbose

@@ -2,7 +2,7 @@ name: "ddclient"
 description: "ddclient"
 version: "0.0.1"
 slug: "ddclient"
-url: "https://github.com/jameskorzekwa/ha-ddclient/src/main/ddclient/"
+url: "https://github.com/jameskorzekwa/ha-ddclient/tree/main/ddclient/"
 init: false
 arch:
   - aarch64
