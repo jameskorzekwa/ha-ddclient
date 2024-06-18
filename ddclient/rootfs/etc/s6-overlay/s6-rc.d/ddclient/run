@@ -20,3 +20,4 @@ dirfiles=$(ls /usr/bin/ | grep ddclient)
 bashio::log.info "${dirfiles}"
 #exec /usr/bin/ddclient -foreground -file /share/ddclient/ddclient.conf
 exec /usr/bin/ddclient -daemon=0 -debug -verbose -noquiet -file /share/ddclient/ddclient.conf
+bashio::log.info "GOT HERE"
