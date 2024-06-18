@@ -1,3 +1,22 @@
-#!/command/execlineb -P
+#!/command/with-contenv bashio
+# ==============================================================================
+# Start the ddclient service
+# s6-overlay docs: https://github.com/just-containers/s6-overlay
+# ==============================================================================
 
-/usr/bin/ddclient -foreground -file /share/ddclient/ddclient.conf
+# Declare variables
+declare message
+
+## Get the 'message' key from the user config options.
+message=$(bashio::config 'message')
+
+## Print the message the user supplied
+bashio::log.info "${message}"
+
+## Run your program
+filecontent=$(cat /share/ddclient/ddclient.conf)
+bashio::log.info "${filecontent}"
+dirfiles=$(ls /usr/bin/ | grep ddclient)
+bashio::log.info "${dirfiles}"
+#exec /usr/bin/ddclient -foreground -file /share/ddclient/ddclient.conf
+exec /usr/bin/ddclient -daemon=0 -debug -verbose -noquiet -file /share/ddclient/ddclient.conf
