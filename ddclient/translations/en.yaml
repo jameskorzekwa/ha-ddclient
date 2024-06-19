@@ -1,5 +1,1 @@
 configuration:
-  message:
-    name: Message
-  ddclient_config:
-    name: ddclient Config

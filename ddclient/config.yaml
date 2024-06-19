@@ -12,11 +12,4 @@ arch:
   - i386
 map:
   - share
-options:
-  message: "All options go directly in the file at /share/ddclient/ddclient.conf"
-  ddclient_config: null
-schema:
-  message: "str?"
-  ddclient_config:
-    - "match(*)"
 image: "ghcr.io/jameskorzekwa/{arch}-ha-ddclient"
