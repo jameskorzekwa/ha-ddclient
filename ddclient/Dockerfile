@@ -22,5 +22,3 @@ COPY rootfs /
 # ports and volumes
 VOLUME /data
 
-
-ENTRYPOINT ["/init"]
