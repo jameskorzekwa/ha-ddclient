@@ -1,4 +1,5 @@
 configuration:
   message:
     name: Message
-    description: Starting ddclient
+  ddclient_config:
+    name: ddclient Config
