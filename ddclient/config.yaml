@@ -17,5 +17,6 @@ options:
   ddclient_config: null
 schema:
   message: "str?"
-  ddclient_config: "match(*)"
+  ddclient_config:
+    - "match(*)"
 image: "ghcr.io/jameskorzekwa/{arch}-ha-ddclient"
