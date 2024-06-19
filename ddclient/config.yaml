@@ -14,7 +14,7 @@ map:
   - share
 options:
   message: "All options go directly in the file at /share/ddclient/ddclient.conf"
-  ddclient_config: null
+  ddclient_config: "test"
 schema:
   message: "str?"
   ddclient_config: str
