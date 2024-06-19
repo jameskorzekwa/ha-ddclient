@@ -26,4 +26,4 @@ bashio::log.info "NOW"
 # test=$(/usr/bin/ddclient --help)
 # bashio::log.info "${test}"
 # bashio::log.info "HERE"
-exec /usr/bin/ddclient --help
+exec rc-service ddclient start
