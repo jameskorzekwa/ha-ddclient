@@ -17,5 +17,5 @@ options:
   ddclient_config: null
 schema:
   message: "str?"
-  ddclient_config: list
+  ddclient_config: str
 image: "ghcr.io/jameskorzekwa/{arch}-ha-ddclient"
