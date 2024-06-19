@@ -4,7 +4,7 @@
 # s6-overlay docs: https://github.com/just-containers/s6-overlay
 # ==============================================================================
 
-if [ -f /share/ddclient/ddclient.conf ]; then
+if [ ! -f /share/ddclient/ddclient.conf ]; then
     bashio::log.error "Missing /share/ddclient/ddclient.conf. Add file and restart addon."
     exit
 fi
