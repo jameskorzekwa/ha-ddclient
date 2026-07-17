@@ -1,6 +1,6 @@
 name: "ddclient"
 description: "ddclient"
-version: "0.0.1"
+version: "0.0.2"
 slug: "ddclient"
 url: "https://github.com/jameskorzekwa/ha-ddclient/tree/main/ddclient/"
 init: false
