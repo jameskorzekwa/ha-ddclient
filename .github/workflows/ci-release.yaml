@@ -71,8 +71,10 @@ jobs:
       - name: Get image name
         id: image
         env:
-          IMAGE: ${{ steps.info.outputs.image }}
-        run: echo "image=${IMAGE##*/}" >> "$GITHUB_OUTPUT"
+          RAW_IMAGE: ${{ steps.info.outputs.image }}
+        run: |
+          image="${RAW_IMAGE//\"/}"
+          echo "image=${image##*/}" >> "$GITHUB_OUTPUT"
 
       - name: Test build add-on
         uses: home-assistant/builder@2024.03.5
@@ -190,8 +192,10 @@ jobs:
       - name: Get image name
         id: image
         env:
-          IMAGE: ${{ steps.info.outputs.image }}
-        run: echo "image=${IMAGE##*/}" >> "$GITHUB_OUTPUT"
+          RAW_IMAGE: ${{ steps.info.outputs.image }}
+        run: |
+          image="${RAW_IMAGE//\"/}"
+          echo "image=${image##*/}" >> "$GITHUB_OUTPUT"
 
       - name: Log in to GitHub Container Registry
         uses: docker/login-action@v3.2.0
